@@ -8,6 +8,7 @@
   --black: #151515;
   --gray: #797979;
   --gray-light: #F0F0F0;
+  --border-color:#CBCBCB;
   --gray-dark: #444444;
   --white: #FFFFFF;
 }
@@ -31,6 +32,7 @@ h1 {
 
 h2 {
   font-size: 24px;
+  font-weight: 600;
 }
 
 h3 {
@@ -48,6 +50,7 @@ p {
   color: var(--white);
   font-size: 16px;
   font-weight: 700;
+  text-align: center;
   border-radius: 12px;
   padding: 16px 32px;
   display: inline-block;
@@ -64,6 +67,7 @@ p {
   color: var(--gray-dark);
   font-size: 16px;
   font-weight: 700;
+  text-align: center;
   border-radius: 12px;
   padding: 16px 32px;
   display: inline-block;
@@ -73,6 +77,14 @@ p {
   background: var(--gray-light);
   /* border-color: var(--primary-dark); */
   cursor: pointer;
+}
+
+input[type="text"] {
+  border: 1px solid var(--border-color);
+  color: var(--gray-dark);
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 16px 24px;
 }
 
 /* Navigation Menu */
