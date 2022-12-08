@@ -29,14 +29,14 @@
   padding: 12px 16px;
 }
 
-.hero-card .hero-card-details .detal-info {
+.hero-card .hero-card-details .detail-info {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: var(--gray);
 }
 
-.hero-card .hero-card-details .detal-info:first-child {
+.hero-card .hero-card-details .detail-info:first-child {
   font-weight: 700;
   font-size: 16px;
   color: var(--gray-dark);
@@ -60,4 +60,154 @@
 .forecast-container {
   background: var(--gray-light);
   padding: 48px 24px;
+}
+
+
+/* Forecast Cards */
+.forecast-cards-container {
+  width: 100%;
+  margin-top: 24px;
+  display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+	gap: 16px;
+}
+
+.forecast-card {
+  width: 100%;
+  height: 224px;
+  background: var(--white);
+	/* background: var(--white); */
+	border-radius: 20px;
+  overflow: hidden;
+
+ 
+}
+
+.card-main {
+  width: 100%;
+  height: 160px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-temperature {
+  width: 100%;
+  height: 64px;
+  font-weight: 700;
+  font-size: 32px; 
+  background: var(--primary);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-info:first-child {
+  font-weight: 600;
+  font-size: 20px; 
+  color: var(--gray-dark);
+}
+.card-info:not(:first-child) {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+
+
+/* Common destinations */
+.common-destinations {
+  padding: 48px 24px;
+}
+
+.common-destinations h2 {
+  text-align: center;
+}
+
+.common-destinations p {
+  text-align: center;
+  color: var(--gray);
+  margin: 24px 0;
+}
+
+.common-destinations > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.newsletter input[type="text"] {
+  width: 100%;
+}
+
+.newsletter .btn-primary {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.common-cards-container {
+  margin-top: 48px;
+  margin-bottom: 36px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.common-card {
+  background: pink  ;
+  height: 224px;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  filter: drop-shadow(0px 7px 4px rgba(0, 0, 0, 0.2));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.common-image {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.common-main {
+  background: var(--white);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.common-temperature {
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--black);
+}
+
+.common-info {
+  font-weight: 600;
+  font-size: 16px; 
+  color: var(--black);
+  
+}
+
+.common-forecast-item {
+  display: flex;
+  align-items: center;
+}
+
+.common-forecast-item + .common-forecast-item {
+  margin-top: 8px;
+}
+
+.common-forecast-item div {
+  color: var(--gray);
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.common-forecast-item div span {
+  font-weight: 700;
+  color: var(--black);
 }
