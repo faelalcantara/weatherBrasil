@@ -11,6 +11,9 @@
   --border-color:#CBCBCB;
   --gray-dark: #444444;
   --white: #FFFFFF;
+  --orange: #FB6453;
+  --orange-light: #FA7752;
+  --yellow: #FFCF4A;
 }
 
 /* Reset */
@@ -43,39 +46,46 @@ p {
   font-size: 16px;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Buttons */
 .btn-primary {
-  background: var(--primary);
-  border: 2px solid var(--primary);
+  background: var(--orange-light);
+  border: 1px solid var(--orange-light);
   color: var(--white);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   border-radius: 12px;
   padding: 16px 32px;
   display: inline-block;
+  transition: ease .15s;
 }
 
 .btn-primary:hover {
-  background-color: var(--primary-dark);
-  border: 2px solid var(--primary-dark);
+  background-color: var(--orange);
+  border: 1px solid var(--orange);
   cursor: pointer;
 }
 
 .btn-secondary {
-  border: 2px solid var(--primary);
+  border: 1px solid var(--border-color);
   color: var(--gray-dark);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   border-radius: 12px;
   padding: 16px 32px;
   display: inline-block;
+  transition: ease-in .15s;
 }
 
 .btn-secondary:hover {
-  background: var(--gray-light);
-  /* border-color: var(--primary-dark); */
+  background: var(--yellow);
+  border: 1px solid var(--yellow);
+  color: var(--black);
   cursor: pointer;
 }
 
@@ -85,6 +95,11 @@ input[type="text"] {
   font-size: 16px;
   border-radius: 12px;
   padding: 16px 24px;
+}
+
+input[type="text"]:focus {
+  border: 1px solid var(--yellow);
+  outline: none;
 }
 
 /* Navigation Menu */
