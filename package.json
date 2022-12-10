@@ -8,7 +8,6 @@
     "build": "snowpack build",
     "lint": "eslint *.js src/**/*.js",
     "format": "prettier --ignore-path ./.gitignore --write \"./**/*.{html,json,js,ts,css}\"",
-    "test": "jest",
     "babel": "babel src -d dist"
   },
   "author": "Rafael Alcantara, Wesly Souza",
@@ -21,7 +20,6 @@
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
-    "jest": "^26.6.3",
     "prettier": "^2.1.2",
     "snowpack": "^2.18.0"
   },
