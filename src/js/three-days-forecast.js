@@ -23,7 +23,7 @@ export default class ThreeDaysForecast {
             threeDaysForecastList[i].dayName = getDayOfTheWeek(threeDaysForecastList[i]);
         }
         threeDaysForecastList.cityName = data.city.name
-        threeDaysForecastList.imageName = threeDaysForecastList.cityName.replace(/[^\w\s]/gi, '')
+        threeDaysForecastList.imageName = threeDaysForecastList.cityName.replace(/[^\w\s]/gi, '').split(' ').join('')
         this.renderForecastList(threeDaysForecastList);
     }
 
