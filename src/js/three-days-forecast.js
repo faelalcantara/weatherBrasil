@@ -23,24 +23,25 @@ export default class ThreeDaysForecast {
             threeDaysForecastList[i].dayName = getDayOfTheWeek(threeDaysForecastList[i]);
         }
         threeDaysForecastList.cityName = data.city.name
+        threeDaysForecastList.imageName = threeDaysForecastList.cityName.replace(/[^\w\s]/gi, '').split(' ').join('')
         this.renderForecastList(threeDaysForecastList);
     }
 
     prepareSecondCardTemplate(template, weather) {
         template.querySelector('.city-name').textContent = weather.cityName;
+        template.querySelector('.common-image').style.backgroundImage = `url(images/${weather.imageName}.jpg)` || 'url(images/noImage.jpg)';
         template.querySelector('.common-temperature').textContent = Math.round(weather[0].main.temp) + ' °F';
-        // template.querySelector('.img-card-icon0').src = 'http://openweathermap.org/img/wn/' + weather.weather[0].icon + '@2x.png';
         template.querySelector('.common-weather').textContent = weather[0].weather[0].main;
         template.querySelector('.common-min-max').textContent = Math.round(weather[0].main.temp_min) + ' / ' + Math.round(weather[0].main.temp_max) + ' °F';
 
         template.querySelector('.img-card-icon1').src = 'http://openweathermap.org/img/wn/' + weather[1].weather[0].icon + '@2x.png';
-        template.querySelector('.forecast-temp1').textContent = weather[1].main.temp_min + ' - ' + Math.round(weather[1].main.temp_min) + '° / ' + Math.round(weather[1].main.temp_max) + '°';
+        template.querySelector('.forecast-temp1').textContent = weather[1].dayName + ' - ' + Math.round(weather[1].main.temp) + '°';
 
         template.querySelector('.img-card-icon2').src = 'http://openweathermap.org/img/wn/' + weather[2].weather[0].icon + '@2x.png';
-        template.querySelector('.forecast-temp2').textContent = weather[2].main.temp_min + ' - ' + Math.round(weather[2].main.temp_min) + '° / ' + Math.round(weather[2].main.temp_max) + '°';
+        template.querySelector('.forecast-temp2').textContent = weather[2].dayName + ' - ' + Math.round(weather[2].main.temp) + '°';
 
         template.querySelector('.img-card-icon3').src = 'http://openweathermap.org/img/wn/' + weather[3].weather[0].icon + '@2x.png';
-        template.querySelector('.forecast-temp3').textContent = weather[3].main.temp_min + ' - ' + Math.round(weather[3].main.temp_min) + '° / ' + Math.round(weather[3].main.temp_max) + '°';
+        template.querySelector('.forecast-temp3').textContent = weather[3].dayName + ' - ' + Math.round(weather[3].main.temp) + '°';
 
         return template;
     }

@@ -19,6 +19,7 @@ export default class Weather {
         let currentMonth = new Date().getMonth() + 1;
         const currentDay = new Date().getDate();
         data.date = 'Today - ' + data.dayName + ', ' + currentMonth + '/'  + currentDay
+        data.imageName = data.name.replace(/[^\w\s]/gi, '').split(' ').join('')
 
         this.renderWeather(data);
     }
@@ -26,6 +27,7 @@ export default class Weather {
     prepareCardTemplate(template, weather) {
         template.querySelector('#weatherIcon').src = 'http://openweathermap.org/img/wn/' + weather.weather[0].icon + '@2x.png';
         template.querySelector('.city-name').textContent = weather.name;
+        template.querySelector('.hero-card-main').style.backgroundImage = `url(images/${weather.imageName}.jpg)` || 'url(images/noImage.jpg)';
         template.querySelector('.date').textContent = weather.date;
         template.querySelector('.weather').textContent = weather.weather[0].main;
         template.querySelector('.min-max').textContent = Math.round(weather.main.temp_min) + '° / ' + Math.round(weather.main.temp_max) + ' °';
