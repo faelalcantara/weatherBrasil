@@ -206,7 +206,7 @@ a.btn-primary:hover {
 }
 
 /* Inputs */
-input[type="text"] {
+input[type="text"], input[type="email"] {
   border: 1px solid var(--border-color);
   color: var(--gray-dark);
   font-size: 16px;
@@ -217,6 +217,14 @@ input[type="text"] {
 input[type="text"]:focus {
   border: 1px solid var(--yellow);
   outline: none;
+}
+
+textarea {
+  border: 1px solid var(--border-color);
+  color: var(--gray-dark);
+  font-size: 16px;
+  border-radius: 12px;
+  padding: 16px 24px;
 }
 
 /* Others */
