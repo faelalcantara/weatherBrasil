@@ -70,6 +70,7 @@
       </template>
       <script src="js/main.js" type="module"></script>
       <script src="js/index.js" type="module"></script>
+      <script src="js/save-form-data.js"></script>
 	</head>
 	<body>
     <header>
@@ -143,8 +144,8 @@
           <h2>Weather in common destinations</h2>
           <p>We help you to know the weather forecast at your next destination. Don't get caught off guard!</p>
           <div class="newsletter">
-            <input type="text" placeholder="Type your best e-maill">
-            <div class="btn-primary">Sign forecast news</div>
+            <input type="text" id="subscriber-email" placeholder="Type your best e-maill">
+            <div class="btn-primary" onclick="saveEmailsubscriber()">Sign forecast news</div>
           </div>
 
           <div class="common-cards-container">
