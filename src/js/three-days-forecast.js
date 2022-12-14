@@ -29,7 +29,6 @@ export default class ThreeDaysForecast {
     prepareSecondCardTemplate(template, weather) {
         template.querySelector('.city-name').textContent = weather.cityName;
         template.querySelector('.common-temperature').textContent = Math.round(weather[0].main.temp) + ' °F';
-        // template.querySelector('.img-card-icon0').src = 'http://openweathermap.org/img/wn/' + weather.weather[0].icon + '@2x.png';
         template.querySelector('.common-weather').textContent = weather[0].weather[0].main;
         template.querySelector('.common-min-max').textContent = Math.round(weather[0].main.temp_min) + ' / ' + Math.round(weather[0].main.temp_max) + ' °F';
 
