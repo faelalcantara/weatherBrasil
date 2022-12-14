@@ -1,0 +1,30 @@
+/*
+  Destinations CSS Styling
+*/
+
+.destinations-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* background:pink; */
+  margin-bottom: var(--spacing-lg);
+}
+
+.destinations-container .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.destinations-container > .wrapper > h1 {
+  font-size: 48px;
+}
+
+.destinations-container > .wrapper > p {
+  max-width: 784px;
+  font-size: 24px;
+  text-align: center;
+  color: var(--gray);
+  margin: var(--spacing-xxsm) 0 var(--spacing-xsm);
+}

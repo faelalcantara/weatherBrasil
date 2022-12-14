@@ -25,7 +25,10 @@ export function renderWithTemplate(template, parent, data, callback) {
 export async function loadHeaderFooter() {
     const footer = await loadTemplate('../partials/footer.html');
     const footerElement = document.getElementById('main-footer');
+    const header = await loadTemplate('../partials/header.html');
+    const headerElement = document.getElementById('main-header');
     renderWithTemplate(footer, footerElement);
+    renderWithTemplate(header, headerElement);
 }
 
 export function renderListWithTemplate(template, parent, list, callback) {
@@ -47,25 +50,25 @@ export function getDayOfTheWeek(object) {
 
     switch (dayOfTheWeek) {
         case 0:
-            weekDay = 'Sun';
+            weekDay = 'Sunday';
             break;
         case 1:
-            weekDay = 'Mon';
+            weekDay = 'Monday';
             break;
         case 2:
-            weekDay = 'Tue';
+            weekDay = 'Tuesday';
             break;
         case 3:
-            weekDay = 'Wed';
+            weekDay = 'Wednesday';
             break;
         case 4:
-            weekDay = 'Thu';
+            weekDay = 'Thursday';
             break;
         case 5:
-            weekDay = 'Fri';
+            weekDay = 'Friday';
             break;
         case 6:
-            weekDay = 'Sat';
+            weekDay = 'Saturday';
             break;
         default:
             weekDay = 'n/a';

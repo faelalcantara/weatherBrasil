@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/destinations.css">
+	<link rel="stylesheet" href="css/nav.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<title>Destinations | Weather Brazil</title>
+	<template id="main-card-container">
+		<div class="hero-card">
+			<div
+				class="hero-card-main"
+				style="background-image: url('images/rio.jpg')"
+			>
+				<div class="temperature"></div>
+				<span class="city-name"></span>
+			</div>
+			<div class="hero-card-details">
+				<div>
+					<div class="detail-info date"></div>
+					<div class="detail-info weather"></div>
+					<div class="detail-info min-max"></div>
+				</div>
+				<div>
+					<img id="weatherIcon" />
+				</div>
+			</div>
+		</div>
+	</template>
+	<template id="five-days-forecast-card-template">
+		<div class="forecast-card">
+			<div class="card-main">
+				<div class="card-icon">
+					<img class="img-card-icon" />
+				</div>
+				<div>
+					<div class="card-info day"></div>
+					<div class="card-info weather"></div>
+					<div class="card-info min-max"></div>
+				</div>
+			</div>
+			<div class="card-temperature temp"></div>
+		</div>
+	</template>
+	<template id="three-days-forecast-card-template">
+		<div
+			class="common-image"
+			style="background-image: url('images/savador-bahia.jpg')"
+		>
+			<span class="city-name"></span>
+		</div>
+		<div class="common-main">
+			<div class="main-summary">
+				<div class="common-temperature"></div>
+				<div class="common-info">Today</div>
+				<div class="card-info common-weather"></div>
+				<div class="card-info common-min-max"></div>
+			</div>
+			<div class="main-forecast">
+				<div class="common-forecast-item">
+					<img class="img-card-icon1" />
+					<div class="forecast-temp1"></div>
+				</div>
+				<div class="common-forecast-item">
+					<img class="img-card-icon2" />
+					<div class="forecast-temp2"></div>
+				</div>
+				<div class="common-forecast-item">
+					<img class="img-card-icon3" />
+					<div class="forecast-temp3"></div>
+				</div>
+			</div>
+		</div>
+	</template>
+</head>
+<body>
+	<header id="main-header">
+		<!-- Navigation -->
+	</header>
+	<main>
+		<!-- Destinations -->
+		<div class="destinations-container">
+			<div class="wrapper">
+				<h1>Check the weather in the best destinations</h1>
+				<p>Check the weather forecast for the most popular destinations in Brazil.</p>
+				
+			</div>
+		</div>
+
+		<!-- Contact -->
+		<div class="contact-container">
+			<div class="wrapper">
+				<h3>Contact us</h3>
+				<p>
+					Av. Atlântica, 1400 Copacabana, Rio de Janeiro 22021-001  |  hello@checkweather.com  |  +55 21 2222-5000
+				</p>
+				<div class="gmap-container">
+					<iframe class="gmap_iframe"
+						
+						src="https://maps.google.com/maps?width=1040&amp;height=400&amp;hl=en&amp;q=avenidaatlantica copacabana&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+	</main>
+	<footer id="main-footer">
+		<!-- footer goes here -->
+	</footer>
+	<script src="js/main.js" type="module"></script>
+	<script src="js/index.js" type="module"></script>
+</body>
+</html>

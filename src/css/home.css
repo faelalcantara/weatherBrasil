@@ -1,10 +1,32 @@
-.bold {
-  font-weight: 700;
+/**
+  Homepage CSS Styling
+**/ 
+
+/* Wrapper */
+.wrapper {
+  width: 100%;
+  max-width: 1184px;
 }
 
 
+/* Hero */
+.hero-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* background:pink; */
+  margin-bottom: var(--spacing-xlg);
+}
+
+.hero-container > .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Hero Card */
 .hero-card {
-  height: 228px;
+  height: 320px;
   width: 100%;
   border-radius: 20px;
   margin: 16px 0;
@@ -41,7 +63,6 @@
 
 .hero-card .hero-card-details {
   background: var(--white);
-  /* height: 40%; */
   display: flex;
   justify-content: space-between;
   padding: 12px 16px;
@@ -51,6 +72,11 @@
   height: 100%;
   display: flex;
   align-items: flex-end;
+}
+
+.hero-card .hero-card-details > div:last-child img {
+  max-width: 50px;
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
 }
 
 .hero-card .hero-card-details .detail-info {
@@ -67,29 +93,44 @@
   margin-bottom: 4px;
 }
 
+/* End of Hero Cards */
 
-.hero > h1 {
+.text-container h1 {
+  font-size: 56px;
   font-weight: 400;
-  padding-top: 16px;
+  /* line-height: 72px; */
 }
 
-.hero > h3 {
+.text-container p {
   font-weight: 500;
   font-size: 20px; 
   color: var(--gray);
-  margin: 16px 0;
+  margin-top: var(--spacing-xxsm);
+  margin-bottom: var(--spacing-sm);
 }
 
-.hero .btn-primary {
-  margin-top: 8px;
-}
-
-
+/* Forecast */
 .forecast-container {
+  width: 100%;
   background: var(--gray-light);
-  padding: 48px 24px;
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-md) 0;
 }
 
+.forecast-container > .wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.forecast-container > .wrapper .forecast-cards-container {
+  width: 100%;
+  display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+	gap: 16px;
+}
 
 /* Forecast Cards */
 .forecast-cards-container {
@@ -118,6 +159,11 @@
   justify-content: space-between;
 }
 
+.card-main .card-icon img {
+max-width: 50px;
+filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.2));
+}
+
 .card-temperature {
   width: 100%;
   height: 64px;
@@ -140,44 +186,68 @@
   font-size: 14px;
   color: var(--gray);
 }
+/* End of Forecast Cards */
 
-
-
-/* Common destinations */
-.common-destinations {
-  padding: 48px 24px;
+.forecast-container > .wrapper > h2 {
+  margin-bottom: var(--spacing-xxsm);
 }
 
-.common-destinations h2 {
-  text-align: center;
+/* Destinations */
+.destinations-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* background:pink; */
+  padding: var(--spacing-xlg) 0;
 }
 
-.common-destinations p {
-  text-align: center;
-  color: var(--gray);
-  margin: 24px 0;
-}
-
-.common-destinations > div {
+.destinations-container .wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.destinations-container > .wrapper > p {
+  max-width: 784px;
+  font-size: 24px;
+  text-align: center;
+  color: var(--gray);
+  margin: var(--spacing-xxsm) 0 var(--spacing-xsm);
+}
+
+.destinations-container > .wrapper .newsletter {
+  width: 100%;
+  display: flex;
   justify-content: center;
 }
 
-.newsletter input[type="text"] {
+.destinations-container > .wrapper .newsletter form {
+  width: 100%;
+  max-width: 768px;
+  display: grid;
+  grid-template-columns: 5fr 3fr;
+  gap: 10px;
+}
+
+.destinations-container > .wrapper .newsletter form input[type="text"] {
   width: 100%;
 }
 
-.newsletter .btn-primary {
+.destinations-container > .wrapper .newsletter form button {
   width: 100%;
-  margin-top: 16px;
 }
 
+.destinations-container > .wrapper > .btn-secondary {
+  margin-top: var(--spacing-sm);
+}
+
+/* Common Cards */
 .common-cards-container {
-  margin-top: 48px;
+  margin-top: var(--spacing-lg);
   margin-bottom: 36px;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 
@@ -246,69 +316,69 @@
   margin-left: 8px;
 }
 
+.common-forecast-item img {
+  max-width: 20px;
+}
+
 .common-forecast-item div span {
   font-weight: 700;
   color: var(--black);
 }
+/* End of Common Cards */
 
-.button-container {
+/* Article */
+.article-container {
   width: 100%;
+  background: var(--gray-light);
   display: flex;
   justify-content: center;
-}
-
-
-/* Article about Brazil */
-article.about-brazil {
-  background: var(--gray-light);
-  padding: 48px 24px;
+  padding: var(--spacing-xlg) 0;
   text-align: center;
 }
 
-article.about-brazil p {
-  margin: 16px 0;
-}
-
-
-article.about-brazil .image-container{
-  max-width: 100%;
-}
-
-article.about-brazil img {
-  max-width: 100%;
-}
-
-article.about-brazil .btn-secondary {
-  margin-top: 16px;
-}
-
-/* Footer */
-
-.contact-info {
-  background: var(--primary-dark);
-  padding: 48px 24px;
-  text-align: center;
-}
-
-.contact-info h3 {
-  color: var(--white);
-}
-
-.contact-info p {
-  margin: 8px 0 32px 0;
-  color: var(--white);
-}
-
-.footer-info {
-  background: var(--black);
-  padding: 48px 24px;
+.article-container > .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  text-align:  center;
 }
 
-.footer-info .rights {
-  font-size: 14px;
-  color: var(--white);
+.article-container > .wrapper p {
+  text-align: center;
+  color: var(--gray-dark);
+  max-width: 768px;
+  margin-top: var(--spacing-xsm);
+}
+
+.article-container > .wrapper img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.article-container > .wrapper img , .article-container > .wrapper a.btn-secondary {
+  margin-top: var(--spacing-sm);
+}
+
+/* Medium Size */
+@media (max-width: 768px) {
+  .hero-container > .wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .common-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .destinations-container > .wrapper .newsletter form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+  }
 }
